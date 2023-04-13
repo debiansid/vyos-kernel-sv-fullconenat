@@ -39,7 +39,7 @@ jobs:
         sleep 120s
         ln -s linux-6.1.23 linux
         ./build-kernel.sh
-        rm *dev".deb
+        rm *dev.deb
     
     - name: make intel-qat deb
     
