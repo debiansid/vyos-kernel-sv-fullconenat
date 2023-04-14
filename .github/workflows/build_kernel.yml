@@ -38,7 +38,15 @@ jobs:
         tar xf linux-6.1.8.tar.xz
         ln -s linux-6.1.8 linux
         ./build-kernel.sh
-
+        rm *dev*.deb *dbg*.deb
+    
+    - name: make intel-qat deb
+      run: |
+        set -eux
+        pwd
+        cd vyos-build
+        ./build-intel-qat.sh
+         cp *.deb ../
 
     - name: ls
       run: |
