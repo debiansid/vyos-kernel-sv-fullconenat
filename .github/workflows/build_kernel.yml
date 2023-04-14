@@ -59,7 +59,9 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
           tag_name: ${{ github.ref_name }}
-          files: vyos-build/linux*.deb
+          files: |
+               vyos-build/linux*.deb
+               vyos-build/vyos-*.deb
           draft: true
           prerelease: true
           
